@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
+import {Nav} from '../nav/nav';
 
 @Component({
   selector: 'app-privacy-policy',
-  imports: [],
+  imports: [
+    Nav
+  ],
   templateUrl: './privacy-policy.html',
   styleUrl: './privacy-policy.scss',
 })

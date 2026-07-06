@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
+import {Nav} from '../nav/nav';
 
 @Component({
   selector: 'app-rules',
-  imports: [],
+  imports: [
+    Nav
+  ],
   templateUrl: './rules.html',
   styleUrl: './rules.scss',
 })

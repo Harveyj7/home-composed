@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
+import {Nav} from '../nav/nav';
 
 @Component({
   selector: 'app-history',
-  imports: [],
+  imports: [
+    Nav
+  ],
   templateUrl: './history.html',
   styleUrl: './history.scss',
 })

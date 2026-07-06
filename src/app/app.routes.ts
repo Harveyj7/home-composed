@@ -5,10 +5,13 @@ import { PrivacyPolicy } from './components/privacy-policy/privacy-policy';
 import { PublicVote } from './components/public-vote/public-vote';
 import { Rules } from './components/rules/rules';
 import { Song } from './components/song/song';
+import { SongsHome } from './components/songs-home/songs-home';
 
 export const routes: Routes = [
   { path: '', component: Home },
-  { path: 'songs', component: Song },
+  { path: 'songs', component: SongsHome },
+  { path: 'songs-home', component: SongsHome },
+  { path: 'songs/:id', component: Song },
   { path: 'public-vote', component: PublicVote },
   { path: 'history', component: History },
   { path: 'rules', component: Rules },
