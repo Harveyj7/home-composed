@@ -54,6 +54,7 @@ BUILD_STAGING="$(mktemp -d)"
 cp -R "${BUILD_DIR}/." "${BUILD_STAGING}/"
 
 git checkout "${DEPLOY_BRANCH}"
+git pull --rebase origin "${DEPLOY_BRANCH}"
 
 git rm -rf . >/dev/null
 cp -R "${BUILD_STAGING}/." .
