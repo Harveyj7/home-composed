@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9af6abf5-ecd6-4ede-9b96-fb7e9439fbc1" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.2284578725256874" />
+      <entry key="MS500" value="1.7705669439580232" />
+      <entry key="S2" value="2.9646966074747745" />
+      <entry key="S5" value="6.865234196802278" />
+      <entry key="S10" value="13.972918986130278" />
+      <entry key="S30" value="40.026582344354416" />
+      <entry key="S60" value="68.58895438207726" />
+      <entry key="M2" value="108.26767879701954" />
+      <entry key="M5" value="159.46055431799908" />
+      <entry key="M10" value="185.7156169220181" />
+      <entry key="M15" value="195.93314438451037" />
+      <entry key="M30" value="207.00085542432262" />
+      <entry key="H1" value="212.87860358507825" />
+      <entry key="H2" value="215.9081420669435" />
+      <entry key="H4" value="217.44619123537024" />
+      <entry key="D1" value="218.73992973822845" />
+      <entry key="W1" value="218.96282001316106" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="0.0" />
+      <entry key="S10" value="0.0" />
+      <entry key="S30" value="0.0" />
+      <entry key="S60" value="0.0" />
+      <entry key="M2" value="0.0" />
+      <entry key="M5" value="0.0" />
+      <entry key="M10" value="0.0" />
+      <entry key="M15" value="0.0" />
+      <entry key="M30" value="0.0" />
+      <entry key="H1" value="0.0" />
+      <entry key="H2" value="0.0" />
+      <entry key="H4" value="0.0" />
+      <entry key="D1" value="0.0" />
+      <entry key="W1" value="0.0" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="1.1571603900385072" />
+      <entry key="MS500" value="1.7292789990962205" />
+      <entry key="S2" value="2.801420628364177" />
+      <entry key="S5" value="6.733555495574126" />
+      <entry key="S10" value="13.886792536386476" />
+      <entry key="S30" value="39.988632532504035" />
+      <entry key="S60" value="68.56711571801151" />
+      <entry key="M2" value="108.25527884469501" />
+      <entry key="M5" value="159.45491370113658" />
+      <entry key="M10" value="185.71262672091035" />
+      <entry key="M15" value="195.9311070041403" />
+      <entry key="M30" value="206.9998129693431" />
+      <entry key="H1" value="212.87807604824687" />
+      <entry key="H2" value="215.9078766724359" />
+      <entry key="H4" value="217.44605812531844" />
+      <entry key="D1" value="218.7399074953456" />
+      <entry key="W1" value="218.96281683418206" />
+    </decayedShown>
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "SHELLCHECK.PATH": "I do mind",
+    "node.js.selected.package.tslint": "(autodetect)"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="TaskManager">
+    <servers />
+  </component>
+</project>
