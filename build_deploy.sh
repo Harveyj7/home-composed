@@ -4,7 +4,9 @@ set -euo pipefail
 SOURCE_BRANCH="main"
 DEPLOY_BRANCH="gh-pages"
 PROJECT_NAME="home-composed"
-BASE_HREF="/home-composed/"
+# 1. CHANGE THIS TO "/" FOR CUSTOM DOMAIN
+BASE_HREF="/"
+CUSTOM_DOMAIN="home26.org" # Set your domain here
 BUILD_DIR="dist/${PROJECT_NAME}/browser"
 COMMIT_MESSAGE="Deploy Angular app to GitHub Pages"
 ORIGINAL_BRANCH="$(git branch --show-current)"
@@ -34,12 +36,19 @@ else
   npm install
 fi
 
+# Build Angular app with root base href
 npx ng build --configuration=production --base-href="${BASE_HREF}"
 
 if [[ ! -d "${BUILD_DIR}" ]]; then
   echo "Build output not found: ${BUILD_DIR}" >&2
   exit 1
 fi
+
+# Copy index.html to 404.html for Angular Client-Side Routing
+cp "${BUILD_DIR}/index.html" "${BUILD_DIR}/404.html"
+
+# 2. CREATE CNAME FILE IN BUILD OUTPUT TO PREVENT WIPEOUT
+echo "${CUSTOM_DOMAIN}" > "${BUILD_DIR}/CNAME"
 
 BUILD_STAGING="$(mktemp -d)"
 cp -R "${BUILD_DIR}/." "${BUILD_STAGING}/"
