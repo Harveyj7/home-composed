@@ -10,9 +10,17 @@ CUSTOM_DOMAIN="home26.org" # Set your domain here
 BUILD_DIR="dist/${PROJECT_NAME}/browser"
 COMMIT_MESSAGE="Deploy Angular app to GitHub Pages"
 ORIGINAL_BRANCH="$(git branch --show-current)"
+BUILD_STAGING=""
+DEPLOY_WORKTREE=""
 
 cleanup() {
-  if [[ -n "${ORIGINAL_BRANCH}" && "$(git branch --show-current)" != "${ORIGINAL_BRANCH}" ]]; then
+  if [[ -n "${DEPLOY_WORKTREE}" && -d "${DEPLOY_WORKTREE}" ]]; then
+    git worktree remove --force "${DEPLOY_WORKTREE}" >/dev/null 2>&1 || true
+  fi
+  if [[ -n "${BUILD_STAGING}" && -d "${BUILD_STAGING}" ]]; then
+    rm -rf "${BUILD_STAGING}"
+  fi
+  if [[ -n "${ORIGINAL_BRANCH}" && "$(git branch --show-current 2>/dev/null)" != "${ORIGINAL_BRANCH}" ]]; then
     git checkout "${ORIGINAL_BRANCH}" >/dev/null 2>&1 || true
   fi
 }
@@ -53,18 +61,21 @@ echo "${CUSTOM_DOMAIN}" > "${BUILD_DIR}/CNAME"
 BUILD_STAGING="$(mktemp -d)"
 cp -R "${BUILD_DIR}/." "${BUILD_STAGING}/"
 
-git checkout "${DEPLOY_BRANCH}"
-git pull --rebase origin "${DEPLOY_BRANCH}"
+git fetch origin "${DEPLOY_BRANCH}"
 
-git rm -rf . >/dev/null
-cp -R "${BUILD_STAGING}/." .
-rm -rf "${BUILD_STAGING}"
+DEPLOY_WORKTREE="$(mktemp -d)"
+rm -rf "${DEPLOY_WORKTREE}"
+git worktree add "${DEPLOY_WORKTREE}" "${DEPLOY_BRANCH}"
+git -C "${DEPLOY_WORKTREE}" pull --rebase origin "${DEPLOY_BRANCH}"
 
-git add .
+git -C "${DEPLOY_WORKTREE}" rm -rf . >/dev/null
+cp -R "${BUILD_STAGING}/." "${DEPLOY_WORKTREE}/"
 
-if git diff --cached --quiet; then
+git -C "${DEPLOY_WORKTREE}" add .
+
+if git -C "${DEPLOY_WORKTREE}" diff --cached --quiet; then
   echo "No deployment changes to commit."
 else
-  git commit -m "${COMMIT_MESSAGE}"
-  git push origin "${DEPLOY_BRANCH}"
+  git -C "${DEPLOY_WORKTREE}" commit -m "${COMMIT_MESSAGE}"
+  git -C "${DEPLOY_WORKTREE}" push origin "${DEPLOY_BRANCH}"
 fi
