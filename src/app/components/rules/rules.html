@@ -4,15 +4,17 @@
   <section class="rules-hero" aria-labelledby="rules-title">
     <div class="rules-hero__content">
       <p class="eyebrow">2026 edition</p>
-      <h1 id="rules-title">Contest rules</h1>
+      <h1 class="rules-title">Contest rules</h1>
       <p class="rules-hero__lead">
-        The 2026 edition of the Home Composed Song Contest is being organised by Andrew
-        Brook, the host, in conjunction with Martin Faulkner from the HCSC Organising
-        Committee and Ben Robertson.
+        The 2026 edition of the Home Composed Song Contest is being organised by Constantinos
+        Karaskos, the host, in conjunction with the HCSC Organising Committee.
       </p>
       <p class="rules-hero__note">
-        Please read the following rules and, if you agree to adhere to them, download the
-        application form at the bottom of the page.
+        Please read the following rules and, if you agree to adhere to them, download the application
+        form at the bottom of the page which will be available from 01 st September.
+      </p>
+      <p class="rules-hero__note">
+        Questions about the rules HCSC26@yahoo.com
       </p>
     </div>
 
@@ -51,16 +53,17 @@
     }
   </section>
 
-  <section class="application-panel" aria-labelledby="application-title">
+  <section class="application-panel application-panel--pending" aria-labelledby="application-title">
     <div>
       <p class="eyebrow">Application form</p>
-      <h2 id="application-title">Ready to enter?</h2>
+      <h2 id="application-title">Ready to enter? <span class="text-tbc">TBC until 1st September</span></h2>
       <p>
-        Complete the entry form and send it with your song, supporting text and photographs
-        to <a [href]="'mailto:' + contactEmail">{{ contactEmail }}</a>.
+        The application form will be available here soon. Once entries open, complete the
+        form and send it with your song, supporting text and photographs to
+        <a [href]="'mailto:' + contactEmail">{{ contactEmail }}</a>.
       </p>
     </div>
-    <a class="button button--primary" [href]="applicationFormUrl">Download application form</a>
+    <a class="button button--disabled" aria-disabled="true" tabindex="-1">Download application form</a>
   </section>
 </main>
 

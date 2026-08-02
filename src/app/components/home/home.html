@@ -1,64 +1,64 @@
-<app-nav></app-nav>
+<app-nav xmlns="http://www.w3.org/1999/html"></app-nav>
 
 <main class="home-page">
-  <section class="hero" aria-labelledby="home-title">
-    <div class="hero__content">
-      <p class="eyebrow">Grand Final 2026</p>
-      <h1 id="home-title">Home Composed Song Contest</h1>
-      <p class="hero__lead">
-        The Grand Final will premiere here from 21.00 CET / 8pm GMT on Saturday
-        29 November 2026.
-      </p>
-      <div class="hero__actions" aria-label="Primary actions">
-        <a class="button button--primary" routerLink="/songs">Listen to the songs</a>
-        <a class="button button--secondary" routerLink="/history">Explore the history</a>
+  <div class="row-flex">
+    <section class="hero" aria-labelledby="home-title">
+      <div class="hero__content">
+        <p class="eyebrow">Grand Final 2026</p>
+  <!--      <div class="home-title">Home Composed Song Contest</div>-->
+        <h1 id="home-title">Home Composed Song Contest</h1>
+        <p class="hero__lead">
+          The Grand Final will premiere here from 21.00 CET / 20:00 GMT on Saturday 05 th December 2026.
+        </p>
+        <div class="hero__actions" aria-label="Primary actions">
+          <a class="button button--primary" routerLink="/songs">Listen to the songs</a>
+          <a class="button button--secondary" routerLink="/history">Explore the history</a>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <aside class="hero__panel" aria-label="Contest highlights">
-      <div>
-        <span class="metric">24</span>
-        <span class="label">competing countries</span>
+    <div class="home-aside">
+      <div class="home-logo" aria-label="Home Composed Song Contest logo">
+        <img src="/assets/hclogo.jpg" alt="Home Composed Song Contest logo" />
       </div>
-      <div>
-        <span class="metric">34th</span>
-        <span class="label">edition</span>
-      </div>
-      <div>
-        <span class="metric">700+</span>
-        <span class="label">original songs</span>
-      </div>
-    </aside>
-  </section>
+
+      <aside class="hero__panel" aria-label="Contest highlights">
+        <div>
+          <span class="metric">TBC</span>
+          <span class="label">competing countries</span>
+        </div>
+        <div>
+          <span class="metric">35th</span>
+          <span class="label">edition</span>
+        </div>
+        <div>
+          <span class="metric">TBC</span>
+          <span class="label">original songs</span>
+        </div>
+      </aside>
+    </div>
+  </div>
 
   <section class="video-feature" aria-labelledby="final-video-title">
     <div class="section-heading">
       <p class="eyebrow">Premiere show</p>
-      <h2 id="final-video-title">Watch the Grand Final</h2>
+      <h2 id="final-video-title">Watch the Grand Final <span class="text-tbc">TBC</span></h2>
     </div>
-    <div class="video-frame">
-      <iframe
-        src="https://www.youtube.com/embed/aIS__0dHIHQ?start=10"
-        title="Home Composed Song Contest 2026 Grand Final"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-      ></iframe>
+    <div class="video-frame video-frame--pending" aria-label="Grand Final video to be confirmed">
+      <div class="video-placeholder">
+        <span class="video-placeholder__status">TBC</span>
+        <span class="video-placeholder__title">Grand Final video coming soon</span>
+      </div>
     </div>
   </section>
 
   <section class="content-grid" aria-label="Contest information">
     <article class="feature-copy">
       <p class="eyebrow">Latest update</p>
-      <h2>The 2026 contest is nearing its conclusion</h2>
+      <h2>Welcome to the launch of the 2026 Home Composed Song Contest</h2>
       <p>
-        All 24 songs have been presented, the competitors and guest juries have submitted
-        their results, and the public vote is now closed. The voting show has been prepared
-        and will receive its premiere on Saturday evening, with a running time of around
-        90 minutes.
-      </p>
-      <p>
-        In the meantime you can listen to all the songs in full, find out more about the
-        contestants, and read the lyrics on the individual contestant pages.
+        This section will be updated regularly to keep the entrants and fans
+        informed as the contest progresses 🙂 – Watch this space!
       </p>
     </article>
 
@@ -70,7 +70,7 @@
         element of public voting.
       </p>
       <p>
-        First devised in 1991, this is the 34th edition of the contest. After Eurovision,
+        First devised in 1991, this is the 35th edition of the contest. After Eurovision,
         we believe it is the longest-running pan-European songwriting contest in existence.
       </p>
     </article>

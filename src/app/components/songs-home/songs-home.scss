@@ -3,6 +3,8 @@
   width: min(1120px, calc(100% - 32px));
   margin: 0 auto;
   padding: 72px 0;
+  filter: grayscale(0.35);
+  opacity: 0.76;
 }
 
 .songs-hero {

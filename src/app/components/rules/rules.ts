@@ -13,17 +13,18 @@ interface RuleSection {
   styleUrl: './rules.scss',
 })
 export class Rules {
-  readonly contactEmail = 'homecomposed2026@gmail.com';
+  readonly contactEmail = 'HCSC26@yahoo.com';
   readonly applicationFormUrl =
     'https://home25.org/wp-content/uploads/2026/09/hcsc-2026-entry-form.docx';
 
   readonly keyDates = [
-    { date: '1 September 2026', label: 'Facebook previews begin' },
-    { date: '19 October 2026, 23:59 CET', label: 'Song submission deadline' },
-    { date: '20 October 2026', label: 'Songs available to listen to in full' },
-    { date: '1-14 November 2026', label: 'Participant jury voting window' },
-    { date: '7-14 November 2026', label: 'Online public vote' },
-    { date: '29 November 2026', label: 'Grand Final on YouTube' },
+    { date: '1 September 2026', label: 'Song Submission begins' },
+    { date: '30 September 2026, 23:59 CET', label: 'Song submission deadline' },
+    { date: '13 October 2026', label: 'Song Reveals in Full' },
+    { date: '27 October 2026', label: 'Jury & Public Voting begins' },
+    { date: '7-14 November 2026', label: 'Jury & Public Voting deadline' },
+    { date: '28 November 2026', label: 'Public Vote Reveal' },
+    { date: '05 December 2026', label: 'Grand Final Show' },
   ];
 
   readonly ruleSections: RuleSection[] = [
@@ -43,7 +44,8 @@ export class Rules {
       title: 'Songs',
       items: [
         'Each Participant may enter one song.',
-        'The song must be your own original work. Covers are not allowed, and you may not enter songs that have been generated for you by AI sites.',
+        'The song must be your own original work. Covers are not allowed, and you may not enter songs that have been generated for you by AI sites, however the use of AI\n' +
+        'assist is permitted solely for final production purposes. You may be asked to send stems of your original recording if any discrepancy.',
         'The maximum length of each song is six minutes.',
         'Songs may be submitted with vocals in any language. Instrumentals are also permitted.',
         'At its discretion, the Organising Committee may reject an entry if it is deemed to be unsuitable for the competition.',
@@ -61,17 +63,20 @@ export class Rules {
         'The entry form completed in full.',
         'An audio file of the song, ideally in mp3 format.',
         'The lyrics, in the language that the song is performed, with translations into another language or languages, should you wish.',
-        'One or more photographs of the Participant and the performer or performers for publication along with your song. Photographs should be landscape rather than portrait if possible.',
+        'One or more photographs of the Participant and the performer or performers for publication along with your song.',
         'A written introduction to the song and or performers, for publication along with your song.',
         `The song, the photographs and the entry form shall be submitted to ${this.contactEmail}.`,
-        'Songs may be submitted from today\'s date up to the final deadline of 23:59 CET on 19 October 2026.',
-        'Songs will be previewed on Facebook in the order that they are received by the organiser, during the period 1 September 2026 to 19 October 2026, and will be available to listen to in full from 20 October 2026.',
+        'Songs may be submitted from 01 September 2026 up to the final deadline of 23:59\n' +
+        'CET on 30 September 2026.',
+        'Songs will not be previewed as in previous years but the final running order of songs\n' +
+        'will be in the order that they are received by the organiser, and will all be available to\n' +
+        'listen to in full from 13 October 2026.',
       ],
     },
     {
       title: 'Voting',
       items: [
-        'Participants have from 1 November 2026 to 14 November 2026 to evaluate the songs and submit their votes. No votes may be submitted prior to 1 November.',
+        'Participants have from 27 October 2026 to 10 November 2026, CET 23:59 to evaluate the songs and submit their votes. No votes will be accepted prior to or after this timeframe.',
         'The voting show will be prepared once the voting deadline has passed.',
         'The Participant will form a jury of one or more people who will listen to all submitted entries and submit votes by the voting deadline.',
         'Each Participant\'s jury must rank all songs in order of preference.',
@@ -80,8 +85,8 @@ export class Rules {
         'The participant will be invited to send a very short introduction video of themselves or someone they nominate, for inclusion in the show for the Grand Final.',
         'The Host, in consultation with the Organising Committee, will determine any guest juries to be invited to take part and the weighting of their votes.',
         'The Host, in consultation with the Organising Committee, will arrange a public internet vote using a reliable format, such as an IP-limited or registration-based online voting system, or a verifiable count of YouTube or SoundCloud views or likes. This vote is intended to encourage engagement from friends and fans of the competitors and the weighting of these votes will be the same as each individual jury votes.',
-        'The online public vote will be open from 7 November 2026 to 14 November 2026.',
-        'The Grand Final will be presented on YouTube on 29 November 2026.',
+        'The online public vote will be open for the same 2 week period as the Jury voting from 27 October 2026 to 10 November 2026, CET 23:59',
+        '11. The Grand Final will be presented on YouTube on 05 December 2026, CET 21:00',
       ],
     },
     {
@@ -109,7 +114,7 @@ export class Rules {
     },
     {
       title: 'Disputes',
-      items: ['The Host\'s decision shall be final in all matters relating to the competition.'],
+      items: ['The Host\'s decision shall be final in all matters relating to the competition, following Committee discussion.'],
     },
   ];
 }

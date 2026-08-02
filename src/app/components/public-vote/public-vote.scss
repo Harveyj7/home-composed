@@ -12,8 +12,10 @@
   align-items: center;
   min-height: calc(100vh - 73px);
   background:
-    linear-gradient(180deg, #f7f9fc 0, #ffffff 340px),
+    linear-gradient(180deg, #f2f4f7 0, #ffffff 340px),
     #ffffff;
+  filter: grayscale(0.35);
+  opacity: 0.78;
 }
 
 .vote-panel {

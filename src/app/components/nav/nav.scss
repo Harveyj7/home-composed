@@ -19,7 +19,7 @@
 }
 
 .site-nav a {
-  color: #172033;
+  //color: #172033;
   font-weight: 750;
   text-decoration: none;
 }
@@ -29,19 +29,6 @@
   flex: 0 0 auto;
   align-items: center;
   gap: 12px;
-}
-
-.site-nav__mark {
-  display: inline-grid;
-  place-items: center;
-  width: 42px;
-  height: 42px;
-  border-radius: 8px;
-  background: #172033;
-  color: #ffffff;
-  font-size: 0.86rem;
-  font-weight: 900;
-  letter-spacing: 0;
 }
 
 .site-nav__title {
@@ -78,6 +65,17 @@
 .site-nav__dropdown:focus-within .site-nav__dropdown-trigger {
   background: #f3f5f9;
   color: #b3274d;
+}
+
+.site-nav__links a.site-nav__link--tbc {
+  background: #f2f4f7;
+  color: #8b95a5;
+}
+
+.site-nav__links a.site-nav__link--tbc:hover,
+.site-nav__links a.site-nav__link--tbc.active {
+  background: #e6e9ee;
+  color: #667085;
 }
 
 .site-nav__dropdown {

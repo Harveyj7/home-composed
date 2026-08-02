@@ -16,7 +16,7 @@ type SongSummary = {
   styleUrl: './songs-home.scss',
 })
 export class SongsHome {
-  readonly songs: SongSummary[] = Array.from({ length: 25 }, (_, index) => {
+  readonly songs: SongSummary[] = Array.from({ length: 0 }, (_, index) => {
     const id = index + 1;
 
     return {

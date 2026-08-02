@@ -6,23 +6,26 @@
     [routerLinkActiveOptions]="{ exact: true }"
     aria-label="Home Composed Song Contest home"
   >
-    <span class="site-nav__mark" aria-hidden="true">HC</span>
+    <span aria-hidden="true">
+      <img src="assets/homeicon.png" alt="home composed icon" width="55px" height="45px"/>
+    </span>
     <span class="site-nav__title">Home Composed</span>
   </a>
 
   <div class="site-nav__links">
     <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
     <div class="site-nav__dropdown">
-      <a class="site-nav__dropdown-trigger" routerLink="/songs" routerLinkActive="active">
-        All Songs
+<!--      <a class="site-nav__dropdown-trigger" routerLink="/songs" routerLinkActive="active">-->
+      <a class="site-nav__link--tbc" routerLink="/songs" routerLinkActive="active">
+        Songs - TBC
       </a>
-      <div class="site-nav__dropdown-menu" aria-label="Song links">
-        @for (song of songs; track song) {
-          <a [routerLink]="['/songs', song]" routerLinkActive="active">Song {{ song }}</a>
-        }
-      </div>
+<!--      <div class="site-nav__dropdown-menu" aria-label="Song links">-->
+<!--        @for (song of songs; track song) {-->
+<!--          <a [routerLink]="['/songs', song]" routerLinkActive="active">Song {{ song }}</a>-->
+<!--        }-->
+<!--      </div>-->
     </div>
-    <a routerLink="/public-vote" routerLinkActive="active">Public Vote</a>
+    <a class="site-nav__link--tbc" routerLink="/public-vote" routerLinkActive="active">Public Vote - TBC</a>
     <a routerLink="/history" routerLinkActive="active">History</a>
     <a routerLink="/rules" routerLinkActive="active">Rules</a>
     <a routerLink="/privacy-policy" routerLinkActive="active">Privacy</a>

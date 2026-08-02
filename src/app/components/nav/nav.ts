@@ -8,5 +8,5 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   styleUrl: './nav.scss',
 })
 export class Nav {
-  readonly songs = Array.from({ length: 25 }, (_, index) => index + 1);
+  readonly songs = Array.from({ length: 0 }, (_, index) => index + 1);
 }
