@@ -13,8 +13,8 @@
     #ffffff;
 }
 
-.rules-title{
-  font-size: 80px;
+.rules-title {
+  font-size: clamp(2.5rem, 8vw, 5rem);
   font-weight: 1000;
 }
 
