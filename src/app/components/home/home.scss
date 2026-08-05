@@ -71,6 +71,24 @@
   text-transform: uppercase;
 }
 
+.resize{
+  width:200px;
+}
+
+.story-panel {
+  width: min(1120px, calc(100% - 32px));
+  border: 1px solid #e3e7ef;
+  border-radius: 8px;
+  background: #ffffff;
+  margin: 32px auto 32px auto;
+  padding: clamp(24px, 4vw, 38px);
+  background: #f7f9fc;
+ div {
+  max-width: 820px;
+} h2 {
+  margin-bottom: 14px;
+}}
+
 h1,
 h2,
 p {
@@ -388,6 +406,10 @@ h2 {
   .video-feature,
   .content-grid,
   .closing-note {
+    width: min(100% - 24px, 1120px);
+  }
+
+  .story-panel{
     width: min(100% - 24px, 1120px);
   }
 

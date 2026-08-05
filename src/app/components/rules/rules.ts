@@ -13,7 +13,7 @@ interface RuleSection {
   styleUrl: './rules.scss',
 })
 export class Rules {
-  readonly contactEmail = 'HCSC26@yahoo.com';
+  readonly contactEmail = 'hcsc26@yahoo.com';
   readonly applicationFormUrl =
     'https://home25.org/wp-content/uploads/2026/09/hcsc-2026-entry-form.docx';
 
@@ -22,9 +22,9 @@ export class Rules {
     { date: '30 September 2026, 23:59 CET', label: 'Song submission deadline' },
     { date: '13 October 2026', label: 'Song Reveals in Full' },
     { date: '27 October 2026', label: 'Jury & Public Voting begins' },
-    { date: '7-14 November 2026', label: 'Jury & Public Voting deadline' },
+    { date: '10 November 2026, 23:59 CET', label: 'Jury & Public Voting deadline' },
     { date: '28 November 2026', label: 'Public Vote Reveal' },
-    { date: '05 December 2026', label: 'Grand Final Show' },
+    { date: '05 December 2026, 21:00 CET', label: 'Grand Final Show' },
   ];
 
   readonly ruleSections: RuleSection[] = [
