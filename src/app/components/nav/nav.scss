@@ -31,6 +31,14 @@
   gap: 12px;
 }
 
+.site-nav__logo {
+  display: block;
+  width: 44px;
+  height: 44px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
 .site-nav__title {
   color: #101827;
   font-size: 1rem;
