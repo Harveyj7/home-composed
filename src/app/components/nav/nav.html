@@ -5,16 +5,49 @@
     routerLinkActive="active"
     [routerLinkActiveOptions]="{ exact: true }"
     aria-label="Home Composed Song Contest home"
+    (click)="closeMenu()"
   >
     <img class="site-nav__logo" src="/assets/hclogo.jpg" alt="" aria-hidden="true" />
     <span class="site-nav__title">Home Composed</span>
   </a>
 
-  <div class="site-nav__links">
-    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+  <button
+    class="site-nav__toggle"
+    [class.site-nav__toggle--open]="isMenuOpen()"
+    type="button"
+    aria-controls="primary-navigation-links"
+    [attr.aria-expanded]="isMenuOpen()"
+    [attr.aria-label]="isMenuOpen() ? 'Close navigation menu' : 'Open navigation menu'"
+    (click)="toggleMenu()"
+  >
+    <span class="site-nav__toggle-icon" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+  </button>
+
+  <div
+    id="primary-navigation-links"
+    class="site-nav__links"
+    [class.site-nav__links--open]="isMenuOpen()"
+  >
+    <a
+      routerLink="/"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      (click)="closeMenu()"
+    >
+      Home
+    </a>
     <div class="site-nav__dropdown">
 <!--      <a class="site-nav__dropdown-trigger" routerLink="/songs" routerLinkActive="active">-->
-      <a class="site-nav__link--tbc" routerLink="/songs" routerLinkActive="active">
+      <a
+        class="site-nav__link--tbc"
+        routerLink="/songs"
+        routerLinkActive="active"
+        (click)="closeMenu()"
+      >
         Songs - TBC
       </a>
 <!--      <div class="site-nav__dropdown-menu" aria-label="Song links">-->
@@ -23,9 +56,16 @@
 <!--        }-->
 <!--      </div>-->
     </div>
-    <a class="site-nav__link--tbc" routerLink="/public-vote" routerLinkActive="active">Public Vote - TBC</a>
-    <a routerLink="/history" routerLinkActive="active">History</a>
-    <a routerLink="/rules" routerLinkActive="active">Rules</a>
-    <a routerLink="/privacy-policy" routerLinkActive="active">Privacy</a>
+    <a
+      class="site-nav__link--tbc"
+      routerLink="/public-vote"
+      routerLinkActive="active"
+      (click)="closeMenu()"
+    >
+      Public Vote - TBC
+    </a>
+    <a routerLink="/history" routerLinkActive="active" (click)="closeMenu()">History</a>
+    <a routerLink="/rules" routerLinkActive="active" (click)="closeMenu()">Rules</a>
+    <a routerLink="/privacy-policy" routerLinkActive="active" (click)="closeMenu()">Privacy</a>
   </div>
 </nav>
