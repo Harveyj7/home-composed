@@ -14,8 +14,7 @@ interface RuleSection {
 })
 export class Rules {
   readonly contactEmail = 'hcsc26@yahoo.com';
-  readonly applicationFormUrl =
-    'https://home25.org/wp-content/uploads/2026/09/hcsc-2026-entry-form.docx';
+  readonly applicationFormUrl = '/assets/HCSC%20Application%20Form%202026.docx';
 
   readonly keyDates = [
     { date: '1 September 2026', label: 'Song Submission begins' },

@@ -87,6 +87,10 @@ h2 {
   line-height: 1.75;
 }
 
+.rules-hero__jump-link {
+  margin-top: 24px;
+}
+
 .rules-contact {
   display: grid;
   gap: 10px;
@@ -207,11 +211,7 @@ a {
   margin-bottom: 64px;
   padding: clamp(24px, 4vw, 38px);
   background: #f7f9fc;
-}
-
-.application-panel--pending {
-  border-color: #e6e9ee;
-  background: #f2f4f7;
+  scroll-margin-top: 24px;
 }
 
 .application-panel div {
@@ -238,6 +238,8 @@ a {
   flex: 0 0 auto;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
+  max-width: 100%;
   min-height: 46px;
   border: 1px solid transparent;
   border-radius: 8px;
@@ -263,16 +265,6 @@ a {
 
 .button--primary:hover {
   background: #b3274d;
-}
-
-.button--disabled,
-.button--disabled:hover {
-  border-color: #d0d5dd;
-  background: #e6e9ee;
-  color: #8b95a5;
-  cursor: default;
-  pointer-events: none;
-  transform: none;
 }
 
 .site-footer {

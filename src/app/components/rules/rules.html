@@ -13,6 +13,9 @@
         Please read the following rules and, if you agree to adhere to them, download the application
         form at the bottom of the page which will be available from 01 st September.
       </p>
+      <a class="button button--primary rules-hero__jump-link" href="rules/#application-form">
+        Skip to application form download
+      </a>
     </div>
 
     <aside class="rules-contact" aria-label="Rules contact">
@@ -50,17 +53,27 @@
     }
   </section>
 
-  <section class="application-panel application-panel--pending" aria-labelledby="application-title">
+  <section
+    id="application-form"
+    class="application-panel"
+    aria-labelledby="application-title"
+  >
     <div>
       <p class="eyebrow">Application form</p>
-      <h2 id="application-title">Ready to enter? <span class="text-tbc">Coming 1st September 2026</span></h2>
+      <h2 id="application-title">Ready to enter?</h2>
       <p>
-        The application form will be available here soon. Once entries open, complete the
-        form and send it with your song, supporting text and photographs to
+        Download and complete the application form, then send it with your song, supporting text
+        and photographs to
         <a [href]="'mailto:' + contactEmail">{{ contactEmail }}</a>.
       </p>
     </div>
-    <a class="button button--disabled" aria-disabled="true" tabindex="-1">Download application form</a>
+    <a
+      class="button button--primary"
+      [href]="applicationFormUrl"
+      download="HCSC Application Form 2026.docx"
+    >
+      Download application form
+    </a>
   </section>
 </main>
 
