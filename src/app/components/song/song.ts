@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
+import songs from '../../data/song.json';
+import { SongData } from '../../models/song-data';
 import { Nav } from '../nav/nav';
 
 @Component({
@@ -9,9 +11,10 @@ import { Nav } from '../nav/nav';
   styleUrl: './song.scss',
 })
 export class Song {
-  readonly songId: string | null;
+  readonly song: SongData | undefined;
 
   constructor(route: ActivatedRoute) {
-    this.songId = route.snapshot.paramMap.get('id');
+    const songId = Number(route.snapshot.paramMap.get('id'));
+    this.song = songs.find((song) => song.id === songId);
   }
 }
