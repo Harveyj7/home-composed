@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import songs from '../../data/song.json';
+import { songs } from '../../data/songs';
 import { SongData } from '../../models/song-data';
 import { Nav } from '../nav/nav';
 

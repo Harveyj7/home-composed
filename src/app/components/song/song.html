@@ -12,6 +12,43 @@
       </div>
       <img [src]="song.imageUrl" [alt]="'Artwork for ' + song.title" />
     </section>
+
+    <section class="song-information" aria-label="Song information">
+      <div class="song-panel">
+        <h2>Song credits</h2>
+        <dl class="song-credits">
+          <div>
+            <dt>Music by</dt>
+            <dd>{{ song.musicBy }}</dd>
+          </div>
+          <div>
+            <dt>Lyrics by</dt>
+            <dd>{{ song.lyricsBy }}</dd>
+          </div>
+          <div>
+            <dt>Performed by</dt>
+            <dd>{{ song.performedBy }}</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="song-panel">
+        <h2>Listen</h2>
+        <audio
+          controls
+          preload="metadata"
+          [src]="song.embeddedAudio"
+          [attr.aria-label]="'Listen to ' + song.title"
+        >
+          Your browser does not support embedded audio.
+        </audio>
+      </div>
+    </section>
+
+    <section class="song-lyrics" aria-labelledby="lyrics-title">
+      <h2 id="lyrics-title">Lyrics</h2>
+      <p>{{ song.lyrics }}</p>
+    </section>
   } @else {
     <section class="song-not-found" aria-labelledby="song-title">
       <p class="eyebrow">Song not found</p>

@@ -3,4 +3,9 @@ export type SongData = {
   title: string;
   description: string;
   imageUrl: string;
+  musicBy: string;
+  lyricsBy: string;
+  performedBy: string;
+  lyrics: string;
+  embeddedAudio: string;
 };

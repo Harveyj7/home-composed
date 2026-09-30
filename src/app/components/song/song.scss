@@ -37,6 +37,65 @@
   align-items: center;
 }
 
+.song-information {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.song-panel,
+.song-lyrics {
+  border: 1px solid #e3e7ef;
+  border-radius: 8px;
+  background: #f8f9fb;
+  padding: 28px;
+}
+
+.song-panel h2,
+.song-lyrics h2 {
+  margin: 0 0 20px;
+  color: #101827;
+  font-size: 1.35rem;
+}
+
+.song-credits {
+  display: grid;
+  gap: 16px;
+  margin: 0;
+}
+
+.song-credits div {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  gap: 12px;
+}
+
+.song-credits dt {
+  color: #6b7587;
+  font-weight: 700;
+}
+
+.song-credits dd {
+  margin: 0;
+  color: #172033;
+  font-weight: 800;
+}
+
+audio {
+  width: 100%;
+}
+
+.song-lyrics {
+  margin-top: 24px;
+  background: #ffffff;
+}
+
+.song-lyrics p {
+  margin-bottom: 0;
+  white-space: pre-line;
+}
+
 .eyebrow {
   margin: 0 0 12px;
   color: #b3274d;
@@ -84,5 +143,21 @@ img {
 
   .song-detail {
     grid-template-columns: 1fr;
+  }
+
+  .song-information {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .song-panel,
+  .song-lyrics {
+    padding: 22px;
+  }
+
+  .song-credits div {
+    grid-template-columns: 1fr;
+    gap: 4px;
   }
 }
