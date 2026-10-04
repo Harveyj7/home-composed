@@ -28,9 +28,9 @@
     </div>
 
     <div class="timeline__grid">
-      @for (item of keyDates; track item.date) {
-        <article class="date-card">
-          <time>{{ item.date }}</time>
+      @for (item of keyDates; track item.dateTime) {
+        <article class="date-card" [class.date-card--past]="hasPassed(item.dateTime)">
+          <time [attr.datetime]="item.dateTime">{{ item.date }}</time>
           <p>{{ item.label }}</p>
         </article>
       }

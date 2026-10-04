@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, DestroyRef, inject, signal } from '@angular/core';
 import { Nav } from '../nav/nav';
 
 interface RuleSection {
@@ -13,18 +13,58 @@ interface RuleSection {
   styleUrl: './rules.scss',
 })
 export class Rules {
+  private readonly destroyRef = inject(DestroyRef);
+  private readonly currentTime = signal(Date.now());
+
   readonly contactEmail = 'hcsc26@yahoo.com';
   readonly applicationFormUrl = '/assets/HCSC%20Application%20Form%202026.docx';
 
   readonly keyDates = [
-    { date: '1 September 2026', label: 'Song Submission begins' },
-    { date: '30 September 2026, 23:59 CET', label: 'Song submission deadline' },
-    { date: '13 October 2026', label: 'Song Reveals in Full' },
-    { date: '27 October 2026', label: 'Jury & Public Voting begins' },
-    { date: '10 November 2026, 23:59 CET', label: 'Jury & Public Voting deadline' },
-    { date: '28 November 2026', label: 'Public Vote Reveal' },
-    { date: '05 December 2026, 21:00 CET', label: 'Grand Final Show' },
+    {
+      date: '1 September 2026',
+      dateTime: '2026-09-01T23:59:59+02:00',
+      label: 'Song Submission begins',
+    },
+    {
+      date: '30 September 2026, 23:59 CET',
+      dateTime: '2026-09-30T23:59:00+01:00',
+      label: 'Song submission deadline',
+    },
+    {
+      date: '13 October 2026',
+      dateTime: '2026-10-13T23:59:59+02:00',
+      label: 'Song Reveals in Full',
+    },
+    {
+      date: '27 October 2026',
+      dateTime: '2026-10-27T23:59:59+01:00',
+      label: 'Jury & Public Voting begins',
+    },
+    {
+      date: '10 November 2026, 23:59 CET',
+      dateTime: '2026-11-10T23:59:00+01:00',
+      label: 'Jury & Public Voting deadline',
+    },
+    {
+      date: '28 November 2026',
+      dateTime: '2026-11-28T23:59:59+01:00',
+      label: 'Public Vote Reveal',
+    },
+    {
+      date: '05 December 2026, 21:00 CET',
+      dateTime: '2026-12-05T21:00:00+01:00',
+      label: 'Grand Final Show',
+    },
   ];
+
+  constructor() {
+    const clock = setInterval(() => this.currentTime.set(Date.now()), 60_000);
+    this.destroyRef.onDestroy(() => clearInterval(clock));
+  }
+
+  hasPassed(dateTime: string): boolean {
+    return this.currentTime() >= Date.parse(dateTime);
+  }
 
   readonly ruleSections: RuleSection[] = [
     {
