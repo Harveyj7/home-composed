@@ -3,7 +3,7 @@ import type { SongData } from "../models/song-data";
 export const songs: SongData[] = [
   {
     id: 1,
-    songTitle: "THOSE CHROMA STIN AGAPI (Give Colour to Love)",
+    songTitle: "THOSE CHROMA STIN AGAPI (Bring Colour to Love)",
     bioGreeting: "Ioanna Savrakidou was born in Uppsala, Sweden. From an early age, she took her first steps in piano and music theory. She continued her music studies at the Matoula and Athena Lambrou Conservatory, where she graduated with a diploma in Music Theory. Later, she launched her career as a singer with great success; for several years, her performances drew large crowds. At the same time, she studied hairdressing and opened her own salon, where she continues to work today.\n\nKonstantinos Papoutsis was born in Serres. From an early age, he began taking his first steps in piano and music theory at the Conservatory of Matoulas and Athena Lambrou. He later continued his music education by taking violin lessons at the Tchaikovsky Conservatory, and studied for his orchestration diploma at the Hepirotic Conservatory Tsakalof of Ioannina, graduating in 2018 with \"Honors\" (Arista). During 2024, he attended professional educational programmes in music technology and music production. He has participated for many years as a member of the \"Orfeus\" Serres choir, and his pieces have been performed by choirs both in Greece and abroad. In 2014 and 2015, the CD single \"Silver Lake\" and the album \"The Soul of Amphipolis\" were released by the record label FM Records. In 2016, the orchestrally accompanied concert featuring the composer's work was staged on the main stage of the Municipal Theater of Serres. In 2017, his choral work titled \"Come Una Preghiera\" was presented inside the Church of Saint Nicholas in Trieste, Italy, performed by the Choir of the Greek Community of Trieste under the direction of conductor Ioanna Papaioannou. In 2021, many of his musical themes were selected for the Ministry of Culture's documentary commemorating the 200 years of Greek independence.\nDespite his remarkable knowledge of music, Konstantinos studied Nursing at the University of Thessaly and, since 2004, has been serving the science of nursing at the General Hospital of Serress.",
     imageUrl: "assets/song1.jpg",
     composer: "KONSTANTINOS PAPOUTSIS",
@@ -339,7 +339,7 @@ The way you see the world`,
     imageUrl: "assets/song6.jpg",
     composer: "Ray Holt, Martin Faulkner & Andrew Donaldson",
     lyricist: "Ray Holt",
-    artist: "Electric June",
+    artist: "Vulnerable",
     representing: "UK 1",
     lyrics: `Here we go, fast or slow, a rodeo
 Whiplash enough to break us

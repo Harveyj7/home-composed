@@ -8,7 +8,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   styleUrl: './nav.scss',
 })
 export class Nav {
-  readonly songs = Array.from({ length: 0 }, (_, index) => index + 1);
+  readonly songs = Array.from({ length: 17 }, (_, index) => index + 1);
   protected readonly isMenuOpen = signal(false);
 
   protected toggleMenu(): void {

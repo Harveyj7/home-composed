@@ -60,6 +60,8 @@ echo "${CUSTOM_DOMAIN}" > "${BUILD_DIR}/CNAME"
 
 BUILD_STAGING="$(mktemp -d)"
 cp -R "${BUILD_DIR}/." "${BUILD_STAGING}/"
+# Source attributes must not re-enable LFS inside deployed asset directories.
+find "${BUILD_STAGING}" -type f -name .gitattributes -delete
 
 git fetch origin "${DEPLOY_BRANCH}"
 
@@ -71,12 +73,10 @@ git -C "${DEPLOY_WORKTREE}" pull --rebase origin "${DEPLOY_BRANCH}"
 git -C "${DEPLOY_WORKTREE}" rm -rf . >/dev/null
 
 
-cp -R "${BUILD_STAGING}/." "${DEPLOY_WORKTREE}/"
-# Disable inherited LFS attributes on the deployment branch
-printf '* -filter -diff -merge\n' > "${DEPLOY_WORKTREE}/.gitattributes"
-
 # Copy actual compiled website files
 cp -R "${BUILD_STAGING}/." "${DEPLOY_WORKTREE}/"
+# Disable inherited LFS attributes on the deployment branch.
+printf '* -filter -diff -merge\n' > "${DEPLOY_WORKTREE}/.gitattributes"
 
 # Check that no LFS pointer files are being deployed
 if grep -RIl --include='*.mp3' --include='*.wav' \
@@ -88,6 +88,13 @@ fi
 
 
 git -C "${DEPLOY_WORKTREE}" add .
+
+# Check the staged blobs: Git filters run during add, after the file check above.
+if git -C "${DEPLOY_WORKTREE}" grep --cached -Il \
+  -e '^version https://git-lfs.github.com/spec/v1$' -- '*.mp3' '*.wav'; then
+  echo "ERROR: Staged LFS pointer files detected in deployment!" >&2
+  exit 1
+fi
 
 
 

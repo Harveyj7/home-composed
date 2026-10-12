@@ -107,7 +107,8 @@
 .site-nav__dropdown-menu {
   position: absolute;
   z-index: 20;
-  top: calc(100% + 8px);
+  // Keep the menu touching its trigger so the pointer never crosses a hover gap.
+  top: 100%;
   left: 0;
   display: grid;
   grid-template-columns: repeat(3, minmax(78px, 1fr));
@@ -120,6 +121,7 @@
   padding: 10px;
   background: #ffffff;
   box-shadow: 0 22px 48px rgb(16 24 39 / 14%);
+  visibility: hidden;
   opacity: 0;
   pointer-events: none;
   transform: translateY(-6px);
@@ -130,9 +132,17 @@
 
 .site-nav__dropdown:hover .site-nav__dropdown-menu,
 .site-nav__dropdown:focus-within .site-nav__dropdown-menu {
+  visibility: visible;
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0);
+}
+
+.site-nav__dropdown:has(.site-nav__dropdown-menu a.active) .site-nav__dropdown-menu {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-6px);
 }
 
 .site-nav__dropdown-menu a {
@@ -271,33 +281,12 @@
   }
 
   .site-nav__dropdown-menu {
-    position: static;
-    right: auto;
-    left: 0;
+    display: none;
   }
 }
 
 @media (max-width: 480px) {
   .site-nav {
     width: min(100% - 24px, 1120px);
-  }
-
-  .site-nav__dropdown-menu {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    min-width: 0;
-    max-height: 0;
-    margin-top: 6px;
-    padding: 0 8px;
-    opacity: 1;
-    transform: none;
-    transition:
-      max-height 180ms ease,
-      padding 180ms ease;
-  }
-
-  .site-nav__dropdown:hover .site-nav__dropdown-menu,
-  .site-nav__dropdown:focus-within .site-nav__dropdown-menu {
-    max-height: 520px;
-    padding: 8px;
   }
 }
