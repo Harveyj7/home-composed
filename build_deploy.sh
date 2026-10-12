@@ -81,6 +81,7 @@ cp -R "${BUILD_STAGING}/." "${DEPLOY_WORKTREE}/"
 # Check that no LFS pointer files are being deployed
 if grep -RIl --include='*.mp3' --include='*.wav' \
   'version https://git-lfs.github.com/spec/v1' \
+  "${DEPLOY_WORKTREE}"; then
   echo "ERROR: LFS pointer files detected in deployment!" >&2
   exit 1
 fi
