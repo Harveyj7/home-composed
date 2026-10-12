@@ -1,19 +1,72 @@
 <app-nav></app-nav>
 
 <main class="song-page">
-  <a class="back-link" routerLink="/songs">
-    <span aria-hidden="true">&larr;</span>
-    Back to all songs
-  </a>
+  <nav class="song-navigation" aria-label="Song navigation">
+    <a class="back-link" routerLink="/songs">
+      <span aria-hidden="true">&larr;</span>
+      Back to all songs
+    </a>
 
-  @if (song; as song) {
+    @if (song(); as song) {
+      <div class="song-flags" role="img" [attr.aria-label]="'Representing ' + song.representing">
+        @for (copy of flagCopies; track copy) {
+          <span aria-hidden="true">{{ countryFlag() }}</span>
+        }
+      </div>
+
+      <div class="song-pagination">
+        @if (previousSong(); as previous) {
+          <a class="song-navigation__link" [routerLink]="['/songs', previous.id]">
+            <span aria-hidden="true">&larr;</span> Previous song
+          </a>
+        } @else {
+          <span class="song-navigation__link" aria-disabled="true">
+            <span aria-hidden="true">&larr;</span> Previous song
+          </span>
+        }
+        @if (nextSong(); as next) {
+          <a class="song-navigation__link" [routerLink]="['/songs', next.id]">
+            Next song <span aria-hidden="true">&rarr;</span>
+          </a>
+        } @else {
+          <span class="song-navigation__link" aria-disabled="true">
+            Next song <span aria-hidden="true">&rarr;</span>
+          </span>
+        }
+      </div>
+    }
+  </nav>
+
+  @if (song(); as song) {
     <section class="song-detail" aria-labelledby="song-title">
       <div class="song-intro">
         <p class="eyebrow">Contest entry {{ song.id }}</p>
-        <h1 id="song-title">{{ song.songTitle }}</h1>
-        <p class="song-description">{{ song.bioGreeting }}</p>
+        <h1 #songTitle id="song-title">{{ song.songTitle }}</h1>
+        <div class="song-greeting">
+          <p id="song-bio-greeting" class="song-description">
+            <span>{{
+              bioGreetingCollapsible() && !bioGreetingExpanded()
+                ? bioGreetingPreview()
+                : song.bioGreeting
+            }}</span>
+            @if (bioGreetingCollapsible()) {
+              <span class="greeting-ending">@if (!bioGreetingExpanded()) {...}<button
+                  class="greeting-toggle"
+                  type="button"
+                  aria-controls="song-bio-greeting"
+                  [attr.aria-expanded]="bioGreetingExpanded()"
+                  [attr.aria-label]="bioGreetingExpanded() ? 'Collapse greeting' : 'Expand greeting'"
+                  (click)="toggleBioGreeting()"
+                ><span class="greeting-toggle__caret" aria-hidden="true"></span></button></span>
+            }
+          </p>
+          <div class="greeting-measure" aria-hidden="true">
+            <p #bioGreetingMeasure class="song-description">{{ song.bioGreeting }}<span
+                #bioGreetingEnding class="greeting-ending" hidden>...<span class="greeting-toggle"></span></span></p>
+          </div>
+        </div>
       </div>
-      <img [src]="song.imageUrl" [alt]="'Artwork for ' + song.songTitle" />
+      <img [appSongArtwork]="song" [alt]="'Artwork for ' + song.songTitle" />
     </section>
 
     <section class="song-information" aria-label="Song information">

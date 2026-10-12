@@ -11,7 +11,7 @@
         <div class="song-card__content">
           <p class="song-card__number">Song {{ song.id }}</p>
           <h2>{{ song.songTitle }}</h2>
-          <p>{{ song.bioGreeting }}</p>
+          <p>Representing {{ song.representing }}</p>
           <a [routerLink]="['/songs', song.id]">View song</a>
         </div>
       </article>

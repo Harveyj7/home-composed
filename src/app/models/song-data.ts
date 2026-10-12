@@ -3,6 +3,7 @@ export type SongData = {
   songTitle: string;
   bioGreeting: string;
   imageUrl: string;
+  imageUrl2?: string;
   composer: string;
   lyricist: string;
   artist: string;

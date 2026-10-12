@@ -35,9 +35,9 @@ require_clean_worktree() {
 }
 
 require_clean_worktree
-
+git lfs install
 git checkout "${SOURCE_BRANCH}"
-
+git lfs pull
 if [[ -f package-lock.json ]]; then
   npm ci
 else
@@ -69,9 +69,29 @@ git worktree add "${DEPLOY_WORKTREE}" "${DEPLOY_BRANCH}"
 git -C "${DEPLOY_WORKTREE}" pull --rebase origin "${DEPLOY_BRANCH}"
 
 git -C "${DEPLOY_WORKTREE}" rm -rf . >/dev/null
+
+
+cp -R "${BUILD_STAGING}/." "${DEPLOY_WORKTREE}/"
+# Disable inherited LFS attributes on the deployment branch
+printf '* -filter -diff -merge\n' > "${DEPLOY_WORKTREE}/.gitattributes"
+
+# Copy actual compiled website files
 cp -R "${BUILD_STAGING}/." "${DEPLOY_WORKTREE}/"
 
+# Check that no LFS pointer files are being deployed
+if grep -RIl --include='*.mp3' --include='*.wav' \
+  'version https://git-lfs.github.com/spec/v1' \
+  echo "ERROR: LFS pointer files detected in deployment!" >&2
+  exit 1
+fi
+
+
 git -C "${DEPLOY_WORKTREE}" add .
+
+
+
+
+
 
 if git -C "${DEPLOY_WORKTREE}" diff --cached --quiet; then
   echo "No deployment changes to commit."

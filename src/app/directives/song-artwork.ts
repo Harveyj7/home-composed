@@ -28,7 +28,7 @@ export class SongArtwork {
 
       const timer = setInterval(() => {
         this.showSecondImage.update((visible) => !visible);
-      }, 3000);
+      }, 2000);
 
       onCleanup(() => clearInterval(timer));
     });

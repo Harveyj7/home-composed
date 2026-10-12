@@ -41,20 +41,19 @@
       Home
     </a>
     <div class="site-nav__dropdown">
-<!--      <a class="site-nav__dropdown-trigger" routerLink="/songs" routerLinkActive="active">-->
-      <a
-        class="site-nav__link--tbc"
-        routerLink="/songs"
-        routerLinkActive="active"
-        (click)="closeMenu()"
-      >
-        Songs
-      </a>
-<!--      <div class="site-nav__dropdown-menu" aria-label="Song links">-->
-<!--        @for (song of songs; track song) {-->
-<!--          <a [routerLink]="['/songs', song]" routerLinkActive="active">Song {{ song }}</a>-->
-<!--        }-->
-<!--      </div>-->
+<!--      <a-->
+<!--        class="site-nav__link&#45;&#45;tbc"-->
+<!--        routerLink="/songs"-->
+<!--        routerLinkActive="active"-->
+<!--        (click)="closeMenu()"-->
+<!--      >-->
+<!--        Songs-->
+<!--      </a>-->
+      <div class="site-nav__dropdown-menu" aria-label="Song links">
+        @for (song of songs; track song) {
+          <a [routerLink]="['/songs', song]" routerLinkActive="active">Song {{ song }}</a>
+        }
+      </div>
     </div>
     <a
       class="site-nav__link--tbc"
