@@ -92,7 +92,7 @@
         <h2 id="listen-title">Listen</h2>
         <audio
           controls
-          preload="metadata"
+          [preload]="song.embeddedAudio.endsWith('.wav') ? 'none' : 'metadata'"
           [src]="song.embeddedAudio"
           [attr.aria-label]="'Listen to ' + song.songTitle"
         >
