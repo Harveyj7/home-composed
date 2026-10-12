@@ -7,11 +7,11 @@
     <p>Browse the competing entries for the Home Composed Song Contest 2026.</p>
     @for (song of songs; track song.id) {
       <article class="song-card">
-        <img [src]="song.imageUrl" [alt]="'Artwork for ' + song.title" loading="lazy" />
+        <img [src]="song.imageUrl" [alt]="'Artwork for ' + song.songTitle" loading="lazy" />
         <div class="song-card__content">
           <p class="song-card__number">Song {{ song.id }}</p>
-          <h2>{{ song.title }}</h2>
-          <p>{{ song.description }}</p>
+          <h2>{{ song.songTitle }}</h2>
+          <p>{{ song.bioGreeting }}</p>
           <a [routerLink]="['/songs', song.id]">View song</a>
         </div>
       </article>

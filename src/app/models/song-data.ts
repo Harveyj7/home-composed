@@ -1,11 +1,12 @@
 export type SongData = {
   id: number;
-  title: string;
-  description: string;
+  songTitle: string;
+  bioGreeting: string;
   imageUrl: string;
-  musicBy: string;
-  lyricsBy: string;
-  performedBy: string;
+  composer: string;
+  lyricist: string;
+  artist: string;
+  representing: string;
   lyrics: string;
   embeddedAudio: string;
 };

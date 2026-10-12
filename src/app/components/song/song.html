@@ -1,44 +1,47 @@
 <app-nav></app-nav>
 
 <main class="song-page">
-  <a class="back-link" routerLink="/songs">Back to all songs</a>
+  <a class="back-link" routerLink="/songs">
+    <span aria-hidden="true">&larr;</span>
+    Back to all songs
+  </a>
 
   @if (song; as song) {
     <section class="song-detail" aria-labelledby="song-title">
-      <div>
+      <div class="song-intro">
         <p class="eyebrow">Contest entry {{ song.id }}</p>
-        <h1 id="song-title">{{ song.title }}</h1>
-        <p>{{ song.description }}</p>
+        <h1 id="song-title">{{ song.songTitle }}</h1>
+        <p class="song-description">{{ song.bioGreeting }}</p>
       </div>
-      <img [src]="song.imageUrl" [alt]="'Artwork for ' + song.title" />
+      <img [src]="song.imageUrl" [alt]="'Artwork for ' + song.songTitle" />
     </section>
 
     <section class="song-information" aria-label="Song information">
-      <div class="song-panel">
-        <h2>Song credits</h2>
+      <div class="song-panel" role="group" aria-labelledby="credits-title">
+        <h2 id="credits-title">Song credits</h2>
         <dl class="song-credits">
           <div>
             <dt>Music by</dt>
-            <dd>{{ song.musicBy }}</dd>
+            <dd>{{ song.composer }}</dd>
           </div>
           <div>
             <dt>Lyrics by</dt>
-            <dd>{{ song.lyricsBy }}</dd>
+            <dd>{{ song.lyricist }}</dd>
           </div>
           <div>
             <dt>Performed by</dt>
-            <dd>{{ song.performedBy }}</dd>
+            <dd>{{ song.artist }}</dd>
           </div>
         </dl>
       </div>
 
-      <div class="song-panel">
-        <h2>Listen</h2>
+      <div class="song-panel song-panel--listen" role="group" aria-labelledby="listen-title">
+        <h2 id="listen-title">Listen</h2>
         <audio
           controls
           preload="metadata"
           [src]="song.embeddedAudio"
-          [attr.aria-label]="'Listen to ' + song.title"
+          [attr.aria-label]="'Listen to ' + song.songTitle"
         >
           Your browser does not support embedded audio.
         </audio>
