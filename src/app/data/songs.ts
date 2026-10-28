@@ -383,43 +383,46 @@ Smash it all to flinders, smash it all to flinders`,
     songTitle: "JULENATT (Christmas Night)",
     bioGreeting: "My name is Roy Vorland. I am from Bergen and grew up on Sotra, on the west coast of Norway. I am a completely sef-taught singer who has developed my voice and musical style through many years of experience, passion, and dedication. Over the years, I have written, produced, and released my own music in both Norwegian and English, and I am perhaps best known for setting Songenfrå vest to music, a song that portrays the coastal culture and history of the people of Sotra. I have released several song in various genres, ranging from pop and ballads to hymns and more traditionally inspired material. Music has always been an important part of my life, and I have also had the pleasure of collaborating with other musicians and being a member of various bands. I perform at many different events in Bergen and the surrounding areas.\u00a0\n\nIn my daily life, I work as a Senior Customer Consultant at DNB Life Insurance, where I assist bereaved families and handle death benefit settlements. It is meaningful work that brings me into contact with people in vulnerable situations. Music has therefore always been an important balance to everyday life and a space where I can express emotions and creativity.\n\nI made my debut in the Home Composed Song Contest in 1997 and won the competition with Min lengsel That same year, I also achieved third place with Vår tíd i sola. Since then, I have returned several times, including as the vocalist on the winning entry Hold Me, Lord in2022, with my own song The Angels Sing in2023 (7th place), and Shattered Hearts in2025 (7th place). With participation spanning nearly three decades, HCSC has become an important part of my musical journey. In 2026, I am excited to present Julenatt and once again be part of the HCSC community.\u00a0\n\nJulenatt\u00a0\nIn January 2026,I was contacted by Elin M. Sekkingstad, who asked whether I would be interested in setting to music a poem that her great-great-grandfather had written sometime during the late 1800s or early 1900s. Andreas Martin Olsen, born in 1837, was a master carpenter in Bergen who taught young boys the carpentry trade. He also sang with the Bergen Choral Society under the direction of the renowned composer Edvard Grieg. The poem was written in the written Danish Norwegian language that was in use at the time. By late February 2026,I had completed the melody. I perform the lyrics exactly as they were originally written, including many old-fashioned words and expressions that are no longer used in everyday speech today.\u00a0\n\nThe song was recorded at Løft Studio with Thomas Haugland (TomTom)\u00a0\n\nProducers: Thomas Haugland & Roy Vorland\nMusicians: . . . . . .\u00a0\nPiano: Tarjei Vatne\u00a0\nBass: Bjarte Berge\u00a0\nFlugelhorn: William Grøv Skramsett\u00a0\nCello: Johan Sebastian Blum\u00a0\nBacking Vocals: Myrna Braza & Roy Vorland\u00a0\nProgramming: Thomas Haugland\u00a0",
     imageUrl: "assets/song7.png",
-    composer: "Thomas Haugland & Roy Vorland",
+    composer: "Roy Vorland",
     lyricist: "ANDREAS MARTIN OLSEN",
     artist: "ROY VORLAND",
     representing: "NORWAY 🇳🇴",
-    lyrics: `JULENATT\u00a0
-\u00a0
-Dybt i det feme,
-jeg vil om jeg kan\u00a0
-skue saalangt,\u00a0
-men min blotte forstand\u00a0
-kan ikke fatte\u00a0
-hvor meget og stort\u00a0
-Herren vor Gud\u00a0
-for os haver gjort.\u00a0
-\u00a0
-Langt i det ferne,\u00a0
-for tusende år,\u00a0
-kom der til nogle der vogtede ffir,
-j ulebudskabet himmelsk sødt:\u00a0
-Eder er i dag en frelser født.\u00a0
-\u00a0
-Deilige skare, yndige kor,\u00a0
+    lyrics: `
+Dybt i det fjerne
+jeg vil om jeg kan
+skue saalangt,
+men min blotte forstand
+kan ikke fatte
+hvor meget og stort
+Herren vor Gud
+for os haver gjort.
+
+Langt i det fjerne
+
+for tusende aar
+
+kom der til nogle der vogtede faar
+julebudskabet himmelsk sødt:
+Eder er i dag en frelser født.
+
+Deilige skare, yndige kor,
 aldrig kan nogen om end han er stor
-hverken med pen eller pensel formå\u00a0
-her at beskrive hvad hvrderne så.\u00a0
-\u00a0
-Derfor o Gud,
-om jeg ikke kan skue\u00a0
-dybt i det fierne\u00a0
-så gjerne jeg vil,\u00a0
-giv meg dog lidt av din Hellig aands lue.\u00a0
+hverken med pen eller pensel formaa
+her at beskrive hvad hyrderne saa.
+
+Derfor o Gud, om jeg ikke kan skue
+
+dybt i det fierne
+
+så gjerne jeg vil,
+giv meg dog lidt av din Hellig aands lue.
 Den kan optænde mit hjerte med ild.
-\u00a0
-Da bliver julen for mig en fest,\u00a0
-Frelseren selv kommer til mig som gjest.\u00a0
-Og naar jeg engang fra verden maa vige\u00a0
-samles jeg hisset med ham i Guds Rige.\u00a0
+
+
+Da bliver julen for mig en fest,
+Frelseren selv kommer til mig som gjest.
+Og naar jeg engang fra verden maa vige
+samles jeg hisset med ham i Guds Rige.
 \u00a0
 \u00a0
 Deep in the distance,\u00a0
